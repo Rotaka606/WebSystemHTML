@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Top Page</title>
+    <link rel="stylesheet" href="css/layout.css">
+  </head>
+
+ <body>
+      <div class="state">
+        <p id="state">ようこそゲストさん</p>
+      </div>
+
+      <div class="login">
+        <button type="button" name="button" >ログイン</button>
+      </div>
+
+      <form class="search" action="" method="get">
+         <input type="text" id="search">
+         <input type="submit" value="検索" onclick="location.href='searchResult.html' " id="query-send">
+      </form>
+
+      <div class="category">
+        <h1 id="genre">ジャンルから探す</h1>
+        <div class="wrapC">
+          <div class="magizine">
+            <a href="category/magazine.html"><img src="img/magazine.png" alt="雑誌"></a>
+          </div>
+          <div class="technical">
+            <a href="category/technical.html"><img src="img/technical.png" alt="技術書"></a>
+          </div>
+          <div class="commic">
+            <a href="category/commic.html"><img src="img/commic.png" alt="コミック"></a>
+          </div>
+          <div class="other">
+            <a href="category/other.html"><img src="img/other.png" alt="その他"></a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="recomendationList">
+        <h1 id="rec">最近のおすすめ！</h1>
+        <div class="wrapR">
+          <a href="ItemDetail.html"><img src="img/recipe.png" alt=""><p>レシピ本</p></a>
+          <a href="ItemDetail.html"><img src="img/misteriousbook.png" alt=""><p>謎の本</p></a>
+          <a href="ItemDetail.html"><img src="img/scarebook.png" alt=""><p>怖い本</p></a>
+          <a href="ItemDetail.html"><img src="img/oldbook.png" alt=""><p>古文書</p></a>
+          <a href="recomendation.html"><p>もっとみる</p></a>
+        </div>
+      </div>
+
+      <div class="rankingList">
+        <h1 id="rec">売れ筋ランキング</h1>
+        <div class="wrapR">
+          <a href="ItemDetail.html"><img src="img/scarebook.png" alt=""><p>怖い本</p></a>
+          <a href="ItemDetail.html"><img src="img/misteriousbook.png" alt=""><p>謎の本</p></a>
+          <a href="ItemDetail.html"><img src="img/oldbook.png" alt=""><p>古文書</p></a>
+          <a href="ItemDetail.html"><img src="img/recipe.png" alt=""><p>レシピ本</p></a>
+        </div>
+      </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/index.js" charset="utf-8"></script>
+  </body>
+</html>
