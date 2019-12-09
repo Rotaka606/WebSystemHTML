@@ -16,3 +16,16 @@ $(function(){
     }
   });
 });
+
+$(function(){
+  $("selectAll").on("click",function(){
+    $("input[name='chk[]']").prop("checked",this.checked);
+  });
+  $("input[name='chk[]']").on("click",function(){
+    if($("#boxes : checked").length == $("#boxes : input").length){
+      $("#selectAll").prop("checked", true);
+    }else{
+      $("#selectAll").prop("checked",false);
+    }
+  })
+});

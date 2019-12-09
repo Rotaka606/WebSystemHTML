@@ -51,20 +51,59 @@
       </div>
 
       <div class="rankingList">
-        <h1 id="rec">ランキング</h1>
-        <div>
-          <label for="ranking">並べ替え: </label>
-                                <select name="ranking" id="ranking">
-                                    <option value="sold">売上順</option>
-                                    <option value="searched">検索されている順</option>
-                                </select>
-        </div>  
-        <div class="wrapR">
-          <a href="ItemDetail.html"><img src="img/scarebook.png" alt=""><p>怖い本</p></a>
-          <a href="ItemDetail.html"><img src="img/misteriousbook.png" alt=""><p>謎の本</p></a>
-          <a href="ItemDetail.html"><img src="img/oldbook.png" alt=""><p>古文書</p></a>
-          <a href="ItemDetail.html"><img src="img/recipe.png" alt=""><p>レシピ本</p></a>
-        </div>
+
+        <h1 id="ranking">ランキング</h1>
+
+        <input type="button" value="並べ替え" class="sort">
+
+        <label for="ranking">:</label>
+          <select class="ranking_sort">
+              <option value="sold" selected>売上順</option>
+              <option value="searched">検索されている順</option>
+          </select>
+
+        <section class="sold">
+          <ol class="wrapR">
+            <a href="ItemDetail.html"><img src="img/scarebook.png" alt=""><li>怖い本</li></a>
+            <a href="ItemDetail.html"><img src="img/misteriousbook.png" alt=""><li>謎の本</li></a>
+            <a href="ItemDetail.html"><img src="img/oldbook.png" alt=""><li>古文書</li></a>
+            <a href="ItemDetail.html"><img src="img/recipe.png" alt=""><li>レシピ本</li></a>
+          </ol>
+        </section>
+
+        <section class="searched">
+          <ol class="wrapR">
+            <a href="ItemDetail.html"><img src="img/misteriousbook.png" alt=""><li>謎の本</li></a>
+            <a href="ItemDetail.html"><img src="img/oldbook.png" alt=""><li>古文書</li></a>
+            <a href="ItemDetail.html"><img src="img/scarebook.png" alt=""><li>怖い本</li></a>
+            <a href="ItemDetail.html"><img src="img/recipe.png" alt=""><li>レシピ本</li></a>
+          </ol>
+        </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+          $(function(){
+            var RS = $(".ranking_sort").val();
+              if(RS == "sold") {
+                $('.sold').css('display', 'block');
+                $('.searched').css('display', 'none');
+              }else if(RS == "searched") {
+                $('.sold').css('display', 'none');
+                $('.searched').css('display', 'block');
+               }
+            $(".ranking_sort").change(function() {
+              var RS = $(".ranking_sort").val();
+              if(RS == "sold") {
+                $('.sold').css('display', 'block');
+                $('.searched').css('display', 'none');
+              }else if(RS == "searched") {
+                $('.sold').css('display', 'none');
+                $('.searched').css('display', 'block');
+               }
+            });
+          });
+          </script>
+
       </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
