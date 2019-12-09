@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
+        <meta charset="utf-8">
         <title>Item Detail</title>
     </head>
 
@@ -39,9 +40,11 @@
                 <div class="revBook">
                         <a href="ItemDetail.html"><img src="img/recipe.png"></a>
                         <a href="ItemDetail.html">3秒クッキング</a>
-                        <img id="book1LikeButton" src="img/unlike.png">
-                            <script>
-                                const src = ["img/unlike.png", "img/like.png"];
+                        <img id="heart" onclick="like()" src="img/unlike.png">
+                            <script type="text/javascript">
+                                function like(){
+                                    document.getElementById("heart").src="img/like.png";
+                                }
                             </script>
                 </div>
             </div>
