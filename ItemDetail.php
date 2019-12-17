@@ -8,21 +8,13 @@
     <body>
         <h1>商品詳細</h1>
         <h2>この本について</h2>
-        <ul>
-            <li>本のタイトル：レシピ本</li>
-            <li>ジャンル：料理</li>
-            <li>発売日：2019/11/26</li>
-            <li>作者：eee</li>
-            <li>価格：1200</li>
-            <li>総合評価：★★★★☆</li>
-            <li>
-                ここ1週間の売上冊数：
-                <? php
-                    $text = "PHP出力テスト";
-                    echo "<p> text </p>";
-                ?>
-            </li>
-        </ul>
+        
+        <?php 
+            include('get_info.php');
+            $id = 003;
+            echo return_info($id);
+        ?>
+
         <p>商品の説明…<br>brabra.</p>
 
         <h2>レビュー</h2>
